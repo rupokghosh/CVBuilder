@@ -10,7 +10,7 @@ function CV() {
         </div>
       </div>
       <div className="Education">
-        <div className="dateAndLocation">
+        <div className="dateAndLocationSchool">
             <div>{date}</div>
             <div>{schoolLocation}</div>
         </div>
@@ -19,7 +19,17 @@ function CV() {
             <div>{degreeName}</div>
         </div>
       </div>
-      <div className="Experience"></div>
+      <div className="Experience">
+        <div className="dateAndLocationJob">
+            <div>{dateJob}</div>
+            <div>{jobLocation}</div>
+        </div>
+        <div className="job">
+            <div>{companyName}</div>
+            <div>{positionName}</div>
+            <div>{positionDescription}</div>
+        </div>
+      </div>
       <div className="Skills"></div>
     </>
   );
