@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function Experience({ setFormData }) {
-  const [education, setEducation] = useState({
+  const [experience, setExperience] = useState({
     schoolName: "",
     degreeName: "",
     schoolLocation: "",
@@ -9,13 +9,19 @@ function Experience({ setFormData }) {
     endDate: "",
   });
 
+  const handleInputChange = (fieldName, value) => {
+    setExperience((prevExperience) => ({
+      ...prevExperience,
+      [fieldName]: value,
+    }));
+  };
   useEffect(() => {
     setFormData(
       (prevData) => ({
         ...prevData,
-        education,
+        experience,
       }),
-      [education, setFormData]
+      [experience, setFormData]
     );
   });
   return (
@@ -28,6 +34,8 @@ function Experience({ setFormData }) {
             name="companyName"
             id="companyName"
             placeholder="Enter company"
+            value={experience.companyName}
+            onChange={(e) => handleInputChange("companyName", e.target.value)}
           />
         </fieldset>
         <fieldset>
@@ -37,13 +45,27 @@ function Experience({ setFormData }) {
             name="positionName"
             id="positionName"
             placeholder="Enter position title"
+            value={experience.positionName}
+            onChange={(e) => handleInputChange("positionName", e.target.value)}
           />
         </fieldset>
         <fieldset>
           <label htmlFor="startDate">Start Date</label>
-          <input type="date" name="startDate" id="startDate" />
+          <input
+            type="date"
+            name="startDate"
+            id="startDate"
+            value={experience.startDate}
+            onChange={(e) => handleInputChange("startDate", e.target.value)}
+          />
           <label htmlFor="endDate">End Date</label>
-          <input type="date" name="endDate" id="endDate" />
+          <input
+            type="date"
+            name="endDate"
+            id="endDate"
+            value={experience.endDate}
+            onChange={(e) => handleInputChange("endDate", e.target.value)}
+          />
         </fieldset>
       </div>
       ;
