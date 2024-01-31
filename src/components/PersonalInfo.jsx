@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function PersonalInfo() {
+function PersonalInfo({ setFormData }) {
   const [personalInfo, setPersonalInfo] = useState({
     fullName: "",
     email: "",
@@ -13,6 +13,13 @@ function PersonalInfo() {
       [fieldName]: value,
     }));
   };
+
+  useEffect(() => {
+    setFormData((prevData) => ({
+      ...prevData,
+      personalInfo,
+    }));
+  }, [personalInfo, setFormData]);
   return (
     <>
       <div className="personalInfoInput">
