@@ -1,4 +1,13 @@
+import { useState } from "react";
+
 function Experience() {
+  const [education, setEducation] = useState({
+    schoolName: "",
+    degreeName: "",
+    schoolLocation: "",
+    startDate: "",
+    endDate: "",
+  });
   return (
     <>
       <div className="experienceInput">
