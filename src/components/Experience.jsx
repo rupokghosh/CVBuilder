@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 
 function Experience({ setFormData }) {
   const [experience, setExperience] = useState({
-    schoolName: "",
-    degreeName: "",
-    schoolLocation: "",
-    startDate: "",
-    endDate: "",
+    companyName: '',
+    positionName: '',
+    startDate: '',
+    endDate: '',
   });
 
   const handleInputChange = (fieldName, value) => {
