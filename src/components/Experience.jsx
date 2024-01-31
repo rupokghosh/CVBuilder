@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function Experience() {
+function Experience({ setFormData }) {
   const [education, setEducation] = useState({
     schoolName: "",
     degreeName: "",
     schoolLocation: "",
     startDate: "",
     endDate: "",
+  });
+
+  useEffect(() => {
+    setFormData(
+      (prevData) => ({
+        ...prevData,
+        education,
+      }),
+      [education, setFormData]
+    );
   });
   return (
     <>
