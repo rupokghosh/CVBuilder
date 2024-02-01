@@ -28,7 +28,7 @@ function CV({ formData, setFormData }) {
   };
 
   return (
-    <>
+    <div className="CV">
       <div className="PersonalInfo">
         <h2>{personalInfo.fullName}</h2>
         <div className="contact">
@@ -63,7 +63,7 @@ function CV({ formData, setFormData }) {
         <div>{skills.skill}</div>
       </div>
       <button onClick={clearCV}>Clear</button>
-    </>
+    </div>
   );
 }
 

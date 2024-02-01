@@ -1,11 +1,12 @@
 function Header() {
-    return (
-      <>
+  return (
+    <>
+      <div className="header">
         <h1>CV Builder</h1>
-        <h4>Harvard Style</h4>
-      </>
-    );
-  }
-  
-  export default Header;
-  
+        <h2> - Harvard Style</h2>
+      </div>
+    </>
+  );
+}
+
+export default Header;

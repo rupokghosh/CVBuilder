@@ -1,6 +1,6 @@
 function Footer () {
     return (
-        <div>
+        <div className="footer">
             <h3>Rupok Adin</h3>
             <a href="https://github.com/rupokghosh/CVBuilder">Code</a>
         </div>
