@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 
 function Experience({ setFormData }) {
   const [experience, setExperience] = useState({
-    companyName: '',
-    positionName: '',
-    startDate: '',
-    endDate: '',
+    companyName: "",
+    positionName: "",
+    startDate: "",
+    endDate: "",
   });
 
   const handleInputChange = (fieldName, value) => {
@@ -67,7 +67,6 @@ function Experience({ setFormData }) {
           />
         </fieldset>
       </div>
-      ;
     </>
   );
 }
