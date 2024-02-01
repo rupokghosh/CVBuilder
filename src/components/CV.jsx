@@ -1,5 +1,31 @@
-function CV({ formData }) {
+function CV({ formData, setFormData }) {
   const { personalInfo, education, experience, skills } = formData;
+
+  const clearCV = () => {
+    setFormData({
+      personalInfo: {
+        fullName: "",
+        email: "",
+        phone: "",
+      },
+      education: {
+        schoolName: "",
+        degreeName: "",
+        schoolLocation: "",
+        startDate: "",
+        endDate: "",
+      },
+      experience: {
+        companyName: "",
+        positionName: "",
+        startDate: "",
+        endDate: "",
+      },
+      skills: {
+        skill: "",
+      },
+    });
+  };
 
   return (
     <>
@@ -36,6 +62,7 @@ function CV({ formData }) {
         <h2>Skills</h2>
         <div>{skills.skill}</div>
       </div>
+      <button onClick={clearCV}>Clear</button>
     </>
   );
 }
