@@ -11,6 +11,29 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background-color: #E3E1D9;
+}
+
+.footer {
+    background-color: #E3E1D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
 main {
     display: flex;
+    background-color: #F2EFE5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
