@@ -1,18 +1,47 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import CV from "./CV";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import CV from "./components/CV";
 import Form from "./components/Form";
-
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [formData, setFormData] = useState({
+    personalInfo: {
+      fullName: "",
+      email: "",
+      phone: "",
+    },
+    education: {
+      schoolName: "",
+      degreeName: "",
+      schoolLocation: "",
+      startDate: "",
+      endDate: "",
+    },
+    experience: {
+      companyName: "",
+      positionName: "",
+      startDate: "",
+      endDate: "",
+    },
+    skills: {
+      skill: "",
+    },
+  });
+
   return (
     <div className="App">
-      <Header></Header>
-      <main>
-        <Form></Form>
-        <CV></CV>
-      </main>
-      <Footer></Footer>
+      <div className="App">
+        <Header />
+        <main>
+          {/* Pass setFormData as a prop to Form component */}
+          <Form formData={formData} setFormData={setFormData} />
+          {/* Pass formData as a prop to CV component */}
+          <CV formData={formData} setFormData={setFormData} />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

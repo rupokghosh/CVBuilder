@@ -1,0 +1,16 @@
+/* App.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif; /* Use Ubuntu font */
+    background-color: #f0f8ff; /* Light Blue */
+  }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main {
+    display: flex;
+}
