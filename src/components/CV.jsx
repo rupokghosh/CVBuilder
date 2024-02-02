@@ -31,13 +31,16 @@ function CV({ formData, setFormData }) {
     <div className="CV">
       <div className="PersonalInfo">
         <h2>{personalInfo.fullName}</h2>
+        <hr></hr>
         <div className="contact">
           <div>{personalInfo.email}</div>
           <div>{personalInfo.phone}</div>
         </div>
       </div>
+
       <div className="Education">
         <h2>Education</h2>
+        <hr />
         <div className="dateAndLocationSchool">
           <div>{education.startDate}</div>
           <div>{education.endDate}</div>
@@ -48,8 +51,10 @@ function CV({ formData, setFormData }) {
           <div>{education.degreeName}</div>
         </div>
       </div>
+
       <div className="Experience">
         <h2>Experience</h2>
+        <hr />
         <div className="dateAndLocationJob">
           <div>{experience.startDate}</div>
           <div>{experience.endDate}</div>
@@ -59,8 +64,10 @@ function CV({ formData, setFormData }) {
           <div>{experience.positionName}</div>
         </div>
       </div>
+
       <div className="Skills">
         <h2>Skills</h2>
+        <hr />
         <div>{skills.skill}</div>
       </div>
       <button onClick={clearCV}>Clear</button>
