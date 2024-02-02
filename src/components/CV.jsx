@@ -39,7 +39,8 @@ function CV({ formData, setFormData }) {
       <div className="Education">
         <h2>Education</h2>
         <div className="dateAndLocationSchool">
-          <div>{education.date}</div>
+          <div>{education.startDate}</div>
+          <div>{education.endDate}</div>
           <div>{education.schoolLocation}</div>
         </div>
         <div className="school">
