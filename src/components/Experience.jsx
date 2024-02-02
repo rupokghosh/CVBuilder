@@ -19,10 +19,10 @@ function Experience({ setFormData }) {
       (prevData) => ({
         ...prevData,
         experience,
-      }),
-      [experience, setFormData]
+      })
+      
     );
-  });
+  }, [experience, setFormData]);
   return (
     <>
       <div className="experienceInput">
