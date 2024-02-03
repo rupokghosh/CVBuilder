@@ -15,13 +15,10 @@ function Experience({ setFormData }) {
     }));
   };
   useEffect(() => {
-    setFormData(
-      (prevData) => ({
-        ...prevData,
-        experience,
-      })
-      
-    );
+    setFormData((prevData) => ({
+      ...prevData,
+      experience,
+    }));
   }, [experience, setFormData]);
   return (
     <>
@@ -66,6 +63,7 @@ function Experience({ setFormData }) {
             onChange={(e) => handleInputChange("endDate", e.target.value)}
           />
         </fieldset>
+        <button>ADD</button>
       </div>
     </>
   );

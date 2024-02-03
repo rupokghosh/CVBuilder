@@ -32,6 +32,7 @@ function Skills({ setFormData }) {
             onChange={(e) => handleInputChange("skill", e.target.value)}
           />
         </fieldset>
+        <button>ADD</button>
       </div>
     </>
   );

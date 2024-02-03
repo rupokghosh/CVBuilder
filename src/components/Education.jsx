@@ -1,13 +1,13 @@
 // Education.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Education({ setFormData }) {
   const [education, setEducation] = useState({
-    schoolName: '',
-    degreeName: '',
-    schoolLocation: '',
-    startDate: '',
-    endDate: '',
+    schoolName: "",
+    degreeName: "",
+    schoolLocation: "",
+    startDate: "",
+    endDate: "",
   });
 
   const handleInputChange = (fieldName, value) => {
@@ -33,7 +33,7 @@ function Education({ setFormData }) {
           name="schoolName"
           id="schoolName"
           value={education.schoolName}
-          onChange={(e) => handleInputChange('schoolName', e.target.value)}
+          onChange={(e) => handleInputChange("schoolName", e.target.value)}
           placeholder="Enter school/university"
         />
       </fieldset>
@@ -44,7 +44,7 @@ function Education({ setFormData }) {
           name="degreeName"
           id="degreeName"
           value={education.degreeName}
-          onChange={(e) => handleInputChange('degreeName', e.target.value)}
+          onChange={(e) => handleInputChange("degreeName", e.target.value)}
           placeholder="Enter degree/certificate"
         />
       </fieldset>
@@ -55,7 +55,7 @@ function Education({ setFormData }) {
           name="schoolLocation"
           id="schoolLocation"
           value={education.schoolLocation}
-          onChange={(e) => handleInputChange('schoolLocation', e.target.value)}
+          onChange={(e) => handleInputChange("schoolLocation", e.target.value)}
           placeholder="Enter Location"
         />
       </fieldset>
@@ -66,7 +66,7 @@ function Education({ setFormData }) {
           name="startDate"
           id="startDate"
           value={education.startDate}
-          onChange={(e) => handleInputChange('startDate', e.target.value)}
+          onChange={(e) => handleInputChange("startDate", e.target.value)}
         />
         <label htmlFor="endDate">End Date</label>
         <input
@@ -74,9 +74,10 @@ function Education({ setFormData }) {
           name="endDate"
           id="endDate"
           value={education.endDate}
-          onChange={(e) => handleInputChange('endDate', e.target.value)}
+          onChange={(e) => handleInputChange("endDate", e.target.value)}
         />
       </fieldset>
+      <button>ADD</button>
     </div>
   );
 }
