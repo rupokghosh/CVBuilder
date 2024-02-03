@@ -41,27 +41,35 @@ function CV({ formData, setFormData }) {
       <div className="Education">
         <h2>Education</h2>
         <hr />
-        <div className="dateAndLocationSchool">
-          <div>{education.startDate}</div>
-          <div>{education.endDate}</div>
-          <div>{education.schoolLocation}</div>
-        </div>
         <div className="school">
-          <div>{education.schoolName}</div>
-          <div>{education.degreeName}</div>
+          <h3>
+            <b>{education.schoolName}</b>
+          </h3>
+          <h4>{education.degreeName}</h4>
+        </div>
+        <div className="dateAndLocationSchool">
+          <div>From - {education.startDate}</div>
+          <div>To - {education.endDate}</div>
+          <div>
+            <i>{education.schoolLocation}</i>
+          </div>
         </div>
       </div>
 
       <div className="Experience">
         <h2>Experience</h2>
         <hr />
-        <div className="dateAndLocationJob">
-          <div>{experience.startDate}</div>
-          <div>{experience.endDate}</div>
-        </div>
         <div className="job">
-          <div>{experience.companyName}</div>
-          <div>{experience.positionName}</div>
+          <h3>
+            <b>{experience.companyName}</b>
+          </h3>
+          <h4>
+            <i>{experience.positionName}</i>
+          </h4>
+        </div>
+        <div className="dateAndLocationJob">
+          <div>From - {experience.startDate}</div>
+          <div>To - {experience.endDate}</div>
         </div>
       </div>
 
