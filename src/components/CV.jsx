@@ -1,5 +1,5 @@
 // CV.jsx
-import React from 'react';
+import React from "react";
 
 function CV({ formData, setFormData }) {
   const { personalInfo, education, experience, skills } = formData;
@@ -7,9 +7,9 @@ function CV({ formData, setFormData }) {
   const clearCV = () => {
     setFormData({
       personalInfo: {
-        fullName: '',
-        email: '',
-        phone: '',
+        fullName: "",
+        email: "",
+        phone: "",
       },
       education: [],
       experience: [],

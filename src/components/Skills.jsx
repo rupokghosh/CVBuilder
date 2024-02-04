@@ -27,8 +27,10 @@ function Skills({ setFormData }) {
           onChange={(e) => setSkill(e.target.value)}
           placeholder="Add skill"
         />
+        <button className="inputButton" onClick={addSkill}>
+          Add Skill
+        </button>
       </fieldset>
-      <button onClick={addSkill}>Add Skill</button>
     </div>
   );
 }

@@ -79,8 +79,10 @@ function Experience({ setFormData }) {
             setExperience({ ...experience, endDate: e.target.value })
           }
         />
+        <button className="inputButton" onClick={addExperience}>
+          Add Experience
+        </button>
       </fieldset>
-      <button onClick={addExperience}>Add Experience</button>
     </div>
   );
 }

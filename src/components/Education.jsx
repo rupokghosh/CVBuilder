@@ -95,8 +95,10 @@ function Education({ setFormData }) {
             setEducation({ ...education, endDate: e.target.value })
           }
         />
+        <button className="inputButton" onClick={addEducation}>
+          Add Education
+        </button>
       </fieldset>
-      <button onClick={addEducation}>Add Education</button>
     </div>
   );
 }
