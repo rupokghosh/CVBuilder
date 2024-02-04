@@ -14,7 +14,7 @@ function App() {
     },
     education: [],
     experience: [],
-    skills: [], 
+    skills: [],
   });
 
   return (
@@ -22,9 +22,9 @@ function App() {
       <div className="App">
         <Header />
         <main>
-          {/* Pass setFormData as a prop to Form component */}
+          {/* Pass setFormData & formData as a prop to Form component */}
           <Form formData={formData} setFormData={setFormData} />
-          {/* Pass formData as a prop to CV component */}
+          {/* Pass setFormData & formData as a prop to CV component */}
           <CV formData={formData} setFormData={setFormData} />
         </main>
         <Footer />
