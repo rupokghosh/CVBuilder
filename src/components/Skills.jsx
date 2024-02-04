@@ -14,7 +14,7 @@ function Skills({ setFormData }) {
       setSkill("");
     }
   };
-
+  // all the jsx
   return (
     <div className="skillInput">
       <fieldset>

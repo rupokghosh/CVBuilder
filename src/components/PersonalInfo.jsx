@@ -20,6 +20,8 @@ function PersonalInfo({ setFormData }) {
       personalInfo,
     }));
   }, [personalInfo, setFormData]);
+
+  // all the jsx
   return (
     <>
       <div className="personalInfoInput">

@@ -12,7 +12,12 @@ function Education({ setFormData }) {
 
   const addEducation = () => {
     // Check if all required fields are filled before adding to CV
-    if (education.schoolName && education.degreeName && education.startDate && education.endDate) {
+    if (
+      education.schoolName &&
+      education.degreeName &&
+      education.startDate &&
+      education.endDate
+    ) {
       setFormData((prevData) => ({
         ...prevData,
         education: [...prevData.education, education],
@@ -27,6 +32,7 @@ function Education({ setFormData }) {
     }
   };
 
+  // all the JSX
   return (
     <div className="educationInput">
       <fieldset>
@@ -36,7 +42,9 @@ function Education({ setFormData }) {
           name="schoolName"
           id="schoolName"
           value={education.schoolName}
-          onChange={(e) => setEducation({ ...education, schoolName: e.target.value })}
+          onChange={(e) =>
+            setEducation({ ...education, schoolName: e.target.value })
+          }
           placeholder="Enter school/university"
         />
       </fieldset>
@@ -47,7 +55,9 @@ function Education({ setFormData }) {
           name="degreeName"
           id="degreeName"
           value={education.degreeName}
-          onChange={(e) => setEducation({ ...education, degreeName: e.target.value })}
+          onChange={(e) =>
+            setEducation({ ...education, degreeName: e.target.value })
+          }
           placeholder="Enter degree/certificate"
         />
       </fieldset>
@@ -58,7 +68,9 @@ function Education({ setFormData }) {
           name="schoolLocation"
           id="schoolLocation"
           value={education.schoolLocation}
-          onChange={(e) => setEducation({ ...education, schoolLocation: e.target.value })}
+          onChange={(e) =>
+            setEducation({ ...education, schoolLocation: e.target.value })
+          }
           placeholder="Enter Location"
         />
       </fieldset>
@@ -69,7 +81,9 @@ function Education({ setFormData }) {
           name="startDate"
           id="startDate"
           value={education.startDate}
-          onChange={(e) => setEducation({ ...education, startDate: e.target.value })}
+          onChange={(e) =>
+            setEducation({ ...education, startDate: e.target.value })
+          }
         />
         <label htmlFor="endDate">End Date</label>
         <input
@@ -77,7 +91,9 @@ function Education({ setFormData }) {
           name="endDate"
           id="endDate"
           value={education.endDate}
-          onChange={(e) => setEducation({ ...education, endDate: e.target.value })}
+          onChange={(e) =>
+            setEducation({ ...education, endDate: e.target.value })
+          }
         />
       </fieldset>
       <button onClick={addEducation}>Add Education</button>
