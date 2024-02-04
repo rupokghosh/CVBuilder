@@ -1,29 +1,19 @@
+// CV.jsx
+import React from 'react';
+
 function CV({ formData, setFormData }) {
   const { personalInfo, education, experience, skills } = formData;
 
   const clearCV = () => {
     setFormData({
       personalInfo: {
-        fullName: "",
-        email: "",
-        phone: "",
+        fullName: '',
+        email: '',
+        phone: '',
       },
-      education: {
-        schoolName: "",
-        degreeName: "",
-        schoolLocation: "",
-        startDate: "",
-        endDate: "",
-      },
-      experience: {
-        companyName: "",
-        positionName: "",
-        startDate: "",
-        endDate: "",
-      },
-      skills: {
-        skill: "",
-      },
+      education: [],
+      experience: [],
+      skills: [],
     });
   };
 
@@ -41,42 +31,52 @@ function CV({ formData, setFormData }) {
       <div className="Education">
         <h2>Education</h2>
         <hr />
-        <div className="school">
-          <h3>
-            <b>{education.schoolName}</b>
-          </h3>
-          <h4>{education.degreeName}</h4>
-        </div>
-        <div className="dateAndLocationSchool">
-          <div>From - {education.startDate}</div>
-          <div>To - {education.endDate}</div>
-          <div>
-            <i>{education.schoolLocation}</i>
+        {education.map((edu, index) => (
+          <div key={index}>
+            <div className="school">
+              <h3>
+                <b>{edu.schoolName}</b>
+              </h3>
+              <h4>{edu.degreeName}</h4>
+            </div>
+            <div className="dateAndLocationSchool">
+              <div>From - {edu.startDate}</div>
+              <div>To - {edu.endDate}</div>
+              <div>
+                <i>{edu.schoolLocation}</i>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
 
       <div className="Experience">
         <h2>Experience</h2>
         <hr />
-        <div className="job">
-          <h3>
-            <b>{experience.companyName}</b>
-          </h3>
-          <h4>
-            <i>{experience.positionName}</i>
-          </h4>
-        </div>
-        <div className="dateAndLocationJob">
-          <div>From - {experience.startDate}</div>
-          <div>To - {experience.endDate}</div>
-        </div>
+        {experience.map((exp, index) => (
+          <div key={index}>
+            <div className="job">
+              <h3>
+                <b>{exp.companyName}</b>
+              </h3>
+              <h4>
+                <i>{exp.positionName}</i>
+              </h4>
+            </div>
+            <div className="dateAndLocationJob">
+              <div>From - {exp.startDate}</div>
+              <div>To - {exp.endDate}</div>
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="Skills">
         <h2>Skills</h2>
         <hr />
-        <div>{skills.skill}</div>
+        {skills.map((skill, index) => (
+          <div key={index}>{skill}</div>
+        ))}
       </div>
       <button onClick={clearCV}>Clear</button>
     </div>

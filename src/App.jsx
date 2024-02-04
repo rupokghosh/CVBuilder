@@ -12,22 +12,9 @@ function App() {
       email: "",
       phone: "",
     },
-    education: {
-      schoolName: "",
-      degreeName: "",
-      schoolLocation: "",
-      startDate: "",
-      endDate: "",
-    },
-    experience: {
-      companyName: "",
-      positionName: "",
-      startDate: "",
-      endDate: "",
-    },
-    skills: {
-      skill: "",
-    },
+    education: [],
+    experience: [],
+    skills: [], 
   });
 
   return (
